@@ -1,18 +1,31 @@
-<h2><%= @cheese.name %></h2>
-<% if @cheese.cheeseimg_file_name == nil %>
-<% else %>
-  <%= image_tag @cheese.cheeseimg.url(:medium) %>
-<% end %>
-<p>Producer: <%= @cheese.producer %></p>
-<p>Milk: <%= @cheese.milk %></p>
-<p>Country: <%= @cheese.country %></p>
-<% if @cheese.region %>
-  <p>Region: <%= @cheese.region %></p>
-<% end %>
-<p>Rind: <%= @cheese.rind %></p>
-<p>Rennet: <%= @cheese.rennet %></p>
-<p>Age: <%= @cheese.age %></p>
-<p>Description: <%= @cheese.description %></p>
-<%= link_to "Edit Cheese", edit_cheese_path(@cheese) %>
-<%= link_to "Delete Cheese", cheese_path(@cheese), method: :delete,
-                             data: { confirm: "Are you sure you want to delete?" } %>
+<section class="show-content">
+	<div id="alpha">
+		<aside>
+			<% if @cheese.cheeseimg_file_name == nil %>
+			<% else %>
+				<%= image_tag @cheese.cheeseimg.url(:medium) %>
+			<% end %>
+		</aside>
+
+		<article class="type-system-slab">
+			<h1><%= @cheese.name %></h1>
+			<ul>
+				<li>Producer: <%= @cheese.producer %></li>
+				<li>Milk: <%= @cheese.milk %></li>
+				<li>Country: <%= @cheese.country %></li>
+				<% if @cheese.region %>
+					<li>Region: <%= @cheese.region %></li>
+				<% end %>
+				<li>Rind: <%= @cheese.rind %></li>
+				<li>Rennet: <%= @cheese.rennet %></li>
+				<li>Age: <%= @cheese.age %></li>
+		  </ul>
+			<p><h3>Description </h3><span><%= @cheese.description %></span></p>
+		<article>
+	</div>
+	<div id="dummy">
+		<%= link_to "Edit Cheese", edit_cheese_path(@cheese) %>
+		<%= link_to "Delete Cheese", cheese_path(@cheese), method: :delete,
+			data: { confirm: "Are you sure you want to delete?" } %>
+	</div>
+</section>

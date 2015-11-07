@@ -6,39 +6,69 @@
 @import "base/base";
 @import "refills/flashes";
 @import "refills/grid-items";
-@import "refills/navigation";
+@import "refills/centered-navigation";
 @import "refills/footer-2";
+@import "refills/type-system-slab";
 
 #new-cheese {
 	text-align: center;
 }
 
+#logo {
+	font-family: roboto;
+	font-weight: 800;
+	font-size: 1.5em;
+	color: white;
+}
+
 html, body {
+	background-color: $light-gray;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-section {
+section.main {
 	@include outer-container;
 	
 	.content { 
 		height: 100%;
 		@include span-columns(10); 
+		@include pad();
 		@include shift(1);
 
-		$content-background: white;
-
-
-		background-color: $content-background;
-  	border-left: 2px solid darken($content-background, 10);
-  	border-right: 2px solid darken($content-background, 10);
-		padding: 10px;
+		background-color: white;
+  	border-left: 2px solid transparentize($dark-gray, .5);
+  	border-right: 2px solid transparentize($dark-gray, .5);
+  	border-bottom: 2px solid transparentize($dark-gray, .5);
+		border-radius: 0px 0px 15px 15px;
 	}
 
 	.flashes {
 		@include span-columns(6); 
 		@include shift(3);
 		padding: 5px;
+	}
+}
+
+.centered {
+	text-align: center;
+}
+
+section.show-content {
+	@include outer-container;
+	#dummy {
+		text-align: center;
+	}
+
+	#alpha {
+		aside {
+			@include span-columns(5);
+		}
+
+		article {
+			@include span-columns(7);
+			@include reset-display;
+		}
 	}
 }

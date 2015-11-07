@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="ROBOTS" content="NOODP" />
   <meta name="viewport" content="initial-scale=1" />
+	 <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+	   <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
   <title><%= @title || "Bloomyminded" %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -11,13 +13,12 @@
 </head>
 <body>
 
+	<section class="main">
 		<%= render "nav" -%>
-	<section>
-		<%= render "flashes" -%>
-		<div class="content">
-			<%= yield %>
-		</div>
-		<%= render "footer" -%>
+			<%= render "flashes" -%>
+			<div class="content">
+				<%= yield %>
+			</div>
 	</section>
 
 </body>

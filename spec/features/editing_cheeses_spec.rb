@@ -23,7 +23,7 @@ RSpec.feature "Users can edit cheeses" do
     click_button "Update Cheese"
 
     expect(page).to have_content "Cheese has been updated" 
-    expect(page).to have_content "Description: Appenzeller"
+    expect(page).to have_content "Description Appenzeller"
   end
 
   scenario "with invalid attributes" do

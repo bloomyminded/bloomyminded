@@ -1,11 +1,11 @@
 example_id                                         | status  | run_time        |
 -------------------------------------------------- | ------- | --------------- |
-./spec/controllers/cheeses_controller_spec.rb[1:1] | passed  | 0.01307 seconds |
-./spec/features/creating_cheeses_spec.rb[1:1]      | passed  | 1.42 seconds    |
-./spec/features/creating_cheeses_spec.rb[1:2]      | passed  | 0.25782 seconds |
-./spec/features/deleting_cheeses_spec.rb[1:1]      | passed  | 0.07403 seconds |
-./spec/features/editing_cheeses_spec.rb[1:1]       | passed  | 0.30059 seconds |
-./spec/features/editing_cheeses_spec.rb[1:2]       | passed  | 0.36611 seconds |
-./spec/features/showing_cheeses_spec.rb[1:1]       | passed  | 0.03258 seconds |
-./spec/helpers/cheeses_helper_spec.rb[1:1]         | pending | 0.00005 seconds |
+./spec/controllers/cheeses_controller_spec.rb[1:1] | passed  | 0.01332 seconds |
+./spec/features/creating_cheeses_spec.rb[1:1]      | passed  | 1.06 seconds    |
+./spec/features/creating_cheeses_spec.rb[1:2]      | passed  | 0.39742 seconds |
+./spec/features/deleting_cheeses_spec.rb[1:1]      | passed  | 0.07186 seconds |
+./spec/features/editing_cheeses_spec.rb[1:1]       | passed  | 0.34669 seconds |
+./spec/features/editing_cheeses_spec.rb[1:2]       | passed  | 0.28989 seconds |
+./spec/features/showing_cheeses_spec.rb[1:1]       | passed  | 0.03508 seconds |
+./spec/helpers/cheeses_helper_spec.rb[1:1]         | pending | 0.00004 seconds |
 ./spec/models/cheese_spec.rb[1:1]                  | pending | 0.00002 seconds |

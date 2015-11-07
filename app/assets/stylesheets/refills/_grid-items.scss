@@ -5,7 +5,7 @@
 .grid-items {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
-  $base-background-color: white !default;
+  $base-background-color: $dark-gray !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   
@@ -39,9 +39,9 @@
   .grid-item {
     @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
-    border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
-    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
+    //border-bottom: $grid-item-border-size solid $grid-items-background;
+    //border-left: ($grid-item-border-size / 2) solid $grid-items-background;
+    //border-right: ($grid-item-border-size / 2) solid $grid-items-background;
     border-top: 0;
     cursor: pointer;
     float: left;

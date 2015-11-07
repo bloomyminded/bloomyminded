@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "Users can create new cheeses" do
   before do 
     visit "/"
-    click_link "New Cheese"
+    click_button "New Cheese"
   end
 
   scenario "with valid attributes" do
