@@ -15,8 +15,10 @@ gem 'puma'
 gem 'bourbon', "~> 4.2.0"
 gem "neat", "~> 1.7.0"
 gem "simple_form"
+gem "country_select"
 
 group :development, :test do
+  gem "guard-rspec"
   gem 'byebug'
   gem "rspec-rails", "~> 3.3.0"
   gem 'pry-rails'

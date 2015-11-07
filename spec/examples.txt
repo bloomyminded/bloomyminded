@@ -1,0 +1,11 @@
+example_id                                         | status  | run_time        |
+-------------------------------------------------- | ------- | --------------- |
+./spec/controllers/cheeses_controller_spec.rb[1:1] | passed  | 0.01609 seconds |
+./spec/features/creating_cheeses_spec.rb[1:1]      | passed  | 0.23437 seconds |
+./spec/features/creating_cheeses_spec.rb[1:2]      | passed  | 0.79412 seconds |
+./spec/features/deleting_cheeses_spec.rb[1:1]      | passed  | 0.06119 seconds |
+./spec/features/editing_cheeses_spec.rb[1:1]       | passed  | 0.25884 seconds |
+./spec/features/editing_cheeses_spec.rb[1:2]       | passed  | 0.28271 seconds |
+./spec/features/showing_cheeses_spec.rb[1:1]       | passed  | 0.54332 seconds |
+./spec/helpers/cheeses_helper_spec.rb[1:1]         | pending | 0.00002 seconds |
+./spec/models/cheese_spec.rb[1:1]                  | pending | 0.00002 seconds |

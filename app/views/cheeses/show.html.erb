@@ -1,0 +1,14 @@
+<h2><%= @cheese.name %></h2>
+<p>Producer: <%= @cheese.producer %></p>
+<p>Milk: <%= @cheese.milk %></p>
+<p>Country: <%= @cheese.country %></p>
+<% if @cheese.region %>
+  <p>Region: <%= @cheese.region %></p>
+<% end %>
+<p>Rind: <%= @cheese.rind %></p>
+<p>Rennet: <%= @cheese.rennet %></p>
+<p>Age: <%= @cheese.age %></p>
+<p>Description: <%= @cheese.description %></p>
+<%= link_to "Edit Cheese", edit_cheese_path(@cheese) %>
+<%= link_to "Delete Cheese", cheese_path(@cheese), method: :delete,
+                             data: { confirm: "Are you sure you want to delete?" } %>
