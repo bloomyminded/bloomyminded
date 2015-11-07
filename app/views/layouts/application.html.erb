@@ -11,8 +11,14 @@
 </head>
 <body>
 
-  <%= render "flashes" -%>
-  <%= yield %>
+		<%= render "nav" -%>
+	<section>
+		<%= render "flashes" -%>
+		<div class="content">
+			<%= yield %>
+		</div>
+		<%= render "footer" -%>
+	</section>
 
 </body>
 </html>

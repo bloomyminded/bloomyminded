@@ -6,3 +6,39 @@
 @import "base/base";
 @import "refills/flashes";
 @import "refills/grid-items";
+@import "refills/navigation";
+@import "refills/footer-2";
+
+#new-cheese {
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	@include outer-container;
+	
+	.content { 
+		height: 100%;
+		@include span-columns(10); 
+		@include shift(1);
+
+		$content-background: white;
+
+
+		background-color: $content-background;
+  	border-left: 2px solid darken($content-background, 10);
+  	border-right: 2px solid darken($content-background, 10);
+		padding: 10px;
+	}
+
+	.flashes {
+		@include span-columns(6); 
+		@include shift(3);
+		padding: 5px;
+	}
+}
