@@ -9,4 +9,7 @@ class Cheese < ActiveRecord::Base
   validates :rennet, presence: true
   validates :age, presence: true
   validates :description, presence: true
+
+  has_attached_file :cheeseimg, styles: { medium: "300x300>", thumb: "100x100>"  }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :cheeseimg, content_type: /\Aimage\/.*\Z/
 end

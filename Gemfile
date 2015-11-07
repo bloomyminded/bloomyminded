@@ -16,6 +16,7 @@ gem 'bourbon', "~> 4.2.0"
 gem "neat", "~> 1.7.0"
 gem "simple_form"
 gem "country_select"
+gem "paperclip", "~> 4.3"
 
 group :development, :test do
   gem "guard-rspec"

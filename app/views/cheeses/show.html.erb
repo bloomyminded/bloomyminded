@@ -1,4 +1,8 @@
 <h2><%= @cheese.name %></h2>
+<% if @cheese.cheeseimg_file_name == nil %>
+<% else %>
+  <%= image_tag @cheese.cheeseimg.url(:medium) %>
+<% end %>
 <p>Producer: <%= @cheese.producer %></p>
 <p>Milk: <%= @cheese.milk %></p>
 <p>Country: <%= @cheese.country %></p>

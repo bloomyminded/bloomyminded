@@ -57,7 +57,7 @@ class CheesesController < ApplicationController
 
   def cheese_params
     params.require(:cheese).permit(:name, :milk, :description, :country, :region, 
-                                   :producer, :rind, :rennet, :texture, :age)
+                                   :producer, :rind, :rennet, :texture, :age, :cheeseimg)
   end
 
 end

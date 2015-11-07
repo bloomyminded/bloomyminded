@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107165457) do
+ActiveRecord::Schema.define(version: 20151107183507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,10 +25,14 @@ ActiveRecord::Schema.define(version: 20151107165457) do
     t.string   "texture"
     t.string   "age"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "milk"
     t.string   "rennet"
+    t.string   "cheeseimg_file_name"
+    t.string   "cheeseimg_content_type"
+    t.integer  "cheeseimg_file_size"
+    t.datetime "cheeseimg_updated_at"
   end
 
 end

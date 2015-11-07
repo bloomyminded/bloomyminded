@@ -1,7 +1,12 @@
 <%= link_to "New Cheese", new_cheese_path %>
-
-<div id="cheeses">
-  <% @cheeses.each do |c| %>
-    <h2><%= link_to c.name, c %></h2>
+<div class="grid-items">
+	<% @cheeses.each do |c| %>
+		<a href="javascript:void(0)" class="grid-item">
+			<h2><%= link_to c.name, c %></h2>
+			<% if c.cheeseimg_file_name == nil %>
+			<% else %>
+				<%= image_tag c.cheeseimg.url(:medium) %>
+			<% end %>
+		</a>
   <% end %>
 </div>
