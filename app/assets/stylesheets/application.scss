@@ -98,7 +98,10 @@ hr {
 }
 
 html, body {
-	background-color: $light-gray;
+	//background-color: $light-gray;
+    @include background-image(url("https://s3-us-west-2.amazonaws.com/bloomyminded/bg.JPG"));
+    background-position: center bottom, center;
+    background-repeat: no-repeat, repeat-x;
 	height: 100%;
   margin-top: 0;
 	margin-left: 5px;
@@ -134,7 +137,7 @@ section.main {
 .centered {
 	text-align: center;
   .fa-copyright {
-    color: transparentize(black, 0.5);
+    color: transparentize(white, 0.5);
   }
 
   small {
