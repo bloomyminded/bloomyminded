@@ -20,6 +20,29 @@
   color: transparentize(white, 0.3);
 }
 
+.search-bar-2 {
+  @include align-items(flex-end);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  
+  a {
+    font-size: .7em;
+    color: $dark-gray;
+  }
+
+  form {
+    background: white;
+    border-radius: 5px;
+    border: $dark-gray;
+    border-width: 0;
+    color: $dark-gray;
+    font-size: .7em;
+    font-style: italic;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
 
 .search-bar {
     //$search-bar-border-color: $base-border-color;
@@ -92,6 +115,7 @@
 
 hr {
   border: 0;
+  margin-top: 0;
   height: 1px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);

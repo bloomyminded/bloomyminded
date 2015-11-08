@@ -4,6 +4,7 @@ class CheesesController < ApplicationController
     @title = "Cheese Database"
     @cheeses = Cheese.all
     @cheeses = @cheeses.tagged_with(params[:search]) if params[:search].present?
+    @cheeses = @cheeses.starts_with(params[:query]) if params[:query].present?
   end
 
   def new
@@ -67,7 +68,7 @@ class CheesesController < ApplicationController
   end
 
   def cheese_params
-    params.require(:cheese).permit(:user, :name, :milk, :description, :country, :region, :producer, 
+    params.require(:cheese).permit(:user, :name, :milk, :description, :country, :region, :producer, :query,
                                    :cheese_id, :tag, :rind, :rennet, :texture, :age, :cheeseimg, :search)
   end
 
