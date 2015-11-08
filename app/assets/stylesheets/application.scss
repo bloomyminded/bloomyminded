@@ -12,7 +12,7 @@
 @import "font-awesome";
 
 .fa-github {
-  color: white;
+  color: transparentize(white, 0.3);
 }
 
 #new-cheese {
@@ -25,6 +25,14 @@
 	font-size: 3em;
   @include pad();
 	color: white;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+
 }
 
 html, body {
@@ -63,6 +71,17 @@ section.main {
 
 .centered {
 	text-align: center;
+}
+
+.buttons-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div {
+    padding-right: 1em;
+    max-width: 50%;
+  }
+  overflow: hidden;
 }
 
 section.show-content {

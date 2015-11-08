@@ -15,19 +15,19 @@
 				<% if user_signed_in?  %>
         <li class="nav-link more"><a href="javascript:void(0)">Account</a>
           <ul class="submenu">
+            <li>
+              <%= link_to destroy_user_session_path do %>
+                Signout <i class="fa fa-github"></i>
+              <% end %>
+            </li>
             <li><a href="javascript:void(0)">Profile</a> </li>
             <li><a href="javascript:void(0)">Dashboard</a> </li>
           </ul>
         </li>
-        <li class="nav-link">
-          <%= link_to destroy_user_session_path do %>
-            <i class="fa fa-github"> Signout</i>
-          <% end %>
-        </li>
 				<% else %>
           <li class="nav-link">
             <%= link_to user_omniauth_authorize_path(:github) do %>
-              <i class="fa fa-github"> Login</i>
+              Signin <i class="fa fa-github"></i>
             <% end %>
           </li>
 				<% end %>

@@ -246,6 +246,7 @@
         &:last-child > a {
           border-bottom-left-radius: $base-border-radius;
           border-bottom-right-radius: $base-border-radius;
+          border-radius: 0px 0px 15px 15px;
           padding-bottom: .7em;
         }
       }
