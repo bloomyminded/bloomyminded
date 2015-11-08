@@ -4,7 +4,12 @@ Rails.application.configure do
   Paperclip.options[:command_path] = "/usr/bin/"
   config.paperclip_defaults = {
     :storage => :s3,
-    :bucket => ENV['AWS_BUCKET_NAME']
+    :s3_protocol => 'http',
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['S3_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['S3_SECRET_ACCESS_KEY']
+    }
   }
 
   # In the development environment your application's code is reloaded on
