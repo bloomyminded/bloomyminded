@@ -17,6 +17,7 @@ gem "neat", "~> 1.7.0"
 gem "simple_form"
 gem "country_select"
 gem "paperclip", "~> 4.3"
+gem 'devise', "~> 3.4.1"
 
 group :development, :test do
   gem "guard-rspec"
