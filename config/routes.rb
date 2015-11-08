@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about/index'
+
   root "cheeses#index"
 
   devise_for :users, :skip => [:sessions], :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"  }
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
 		get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
 		get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 	end
+
+  match 'about' => 'about#index', via: get
 
 
   resources :cheeses do
