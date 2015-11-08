@@ -23,9 +23,10 @@
 			<p><h3>Description </h3><span><%= @cheese.description %></span></p>
 		<article>
 	</div>
-	<div id="dummy">
-		<%= link_to "Edit Cheese", edit_cheese_path(@cheese) %>
-		<%= link_to "Delete Cheese", cheese_path(@cheese), method: :delete,
-			data: { confirm: "Are you sure you want to delete?" } %>
-	</div>
 </section>
+
+<div class="centered">
+  <p><%= button_to "Edit Cheese", edit_cheese_path(@cheese), method: :get %></p>
+  <p><%= button_to "Delete Cheese", cheese_path(@cheese), method: :delete,
+    data: { confirm: "Are you sure you want to delete?" } %></p>
+</div>
