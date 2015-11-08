@@ -19,6 +19,7 @@
   $horizontal-bar-mode: $large-screen;
 
   background-color: $centered-navigation-background;
+  //@include background-image(url("slate.jpg"));
 	border-radius: 0px 0px 15px 15px;
   border-bottom: 1px solid darken($centered-navigation-background, 6%);
   min-height: $centered-navigation-height;

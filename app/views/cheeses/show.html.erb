@@ -4,6 +4,7 @@
 			<% if @cheese.cheeseimg_file_name == nil %>
 			<% else %>
 				<%= image_tag @cheese.cheeseimg.url(:medium) %>
+        <div class="centered"><small>Photo by <%= @cheese.producer %></small></div>
 			<% end %>
 		</aside>
 
