@@ -11,7 +11,10 @@
 @import "refills/type-system-slab";
 @import "refills/badges";
 @import "refills/expander";
+@import "refills/accordion-tabs-minimal";
 @import "font-awesome";
+
+
 
 .fa-github {
   color: transparentize(white, 0.3);
@@ -75,6 +78,10 @@
 	text-align: center;
 }
 
+#about-name {
+	font-family: 'Great Vibes', cursive;
+}
+
 #logo {
 	font-family: 'Great Vibes', cursive;
 	font-weight: 600;
@@ -88,7 +95,6 @@ hr {
   height: 1px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
-
 }
 
 html, body {
