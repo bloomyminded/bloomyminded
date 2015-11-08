@@ -20,21 +20,41 @@
 				<li>Rind: <%= @cheese.rind %></li>
 				<li>Rennet: <%= @cheese.rennet %></li>
 				<li>Age: <%= @cheese.age %></li>
-        <% if @cheese.tags.size > 1 %>
-          <li><i class="fa fa-tags"></i>
-            <small><%= @cheese.tags.join(",") %></small>
+        <% if @cheese.all_tags_list.size > 0 %>
+          <li>
+            <i class="fa fa-tags"></i>
+            <% @cheese.tags.each do |t| %>
+              <%= link_to t.name.downcase, cheeses_path(search: t.name), class: "badge" %>
+            <% end %>
+          </li>
+        <% else %>
+          <li>
+            <i class="fa fa-tags"></i>
+            <small class="tag">No tags!</i></small>
           </li>
         <% end %>
+        <div class="search-bar">
+          <%= form_tag(cheese_add_tag_path(@cheese), {:class => "search-bar", :roll => "search"}) do %>
+            <%= hidden_field_tag :user, current_user.id %>
+            <%= text_field_tag :tag, nil, placeholder: 'add tasting notes... comma seperated' %>
+          <% end %>
+        </div>
 		  </ul>
+			<br>
 			<p><h3>Description </h3><span><%= @cheese.description %></span></p>
 		<article>
 	</div>
 </section>
 
+<% if user_signed_in? %>
   <hr>
-<div class="buttons-centered">
-  <div><%= button_to "Edit Cheese", edit_cheese_path(@cheese), method: :get %></div>
+  <div class="buttons-centered">
 
-  <div><%= button_to "Delete Cheese", cheese_path(@cheese), method: :delete,
-    data: { confirm: "Are you sure you want to delete?" } %></div>
-</div>
+      <div><%= button_to "Edit Cheese", edit_cheese_path(@cheese), method: :get %></div>
+      <% if current_user.has_role? :admin %>
+      <div><%= button_to "Delete Cheese", cheese_path(@cheese), method: :delete,
+        data: { confirm: "Are you sure you want to delete?" } %></div>
+      <% end %>
+
+  </div>
+<% end %>

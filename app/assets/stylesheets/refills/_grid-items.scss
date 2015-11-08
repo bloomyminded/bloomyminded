@@ -48,7 +48,8 @@
     height: $grid-item-height;
     overflow: hidden;
     outline: none;
-    padding: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
     text-align: center;
     width: 100%;
 
@@ -94,6 +95,7 @@
 
   .grid-item p {
       margin: auto;
+      font-size: .9em;
       color: transparentize($grid-item-color, 0.3);
       
       @include media($medium-screen) {

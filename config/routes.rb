@@ -8,5 +8,8 @@ Rails.application.routes.draw do
 		get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 	end
 
-  resources :cheeses
+
+  resources :cheeses do
+    match 'add_tag' => 'cheeses#add_to_tags', via: :post
+  end
 end

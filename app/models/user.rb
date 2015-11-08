@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  after_initialize :set_default_role, :if => :new_record?
+
+  rolify 
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, :omniauth_providers => [:github]
@@ -15,4 +17,14 @@ class User < ActiveRecord::Base
 			user.password = Devise.friendly_token[0,20]
 		end
 	end
+
+  private
+
+  def set_default_role
+    self.add_role :user
+
+    if self.email == "codyjroberts@gmail.com"
+      self.add_role :admin
+    end
+  end
 end

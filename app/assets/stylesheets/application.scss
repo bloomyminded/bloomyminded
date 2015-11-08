@@ -9,10 +9,66 @@
 @import "refills/centered-navigation";
 @import "refills/footer-2";
 @import "refills/type-system-slab";
+@import "refills/badges";
+@import "refills/expander";
 @import "font-awesome";
 
 .fa-github {
   color: transparentize(white, 0.3);
+}
+
+
+.search-bar {
+    //$search-bar-border-color: $base-border-color;
+    //$search-bar-border: 1px solid $search-bar-border-color;
+    //$search-bar-background: lighten($search-bar-border-color, 10%);
+
+		padding: 0.5em 0.5em;
+    width: 70%;
+
+    form {
+      input[type=text] {
+        @include box-sizing(border-box);
+        background: white;
+        border-radius: 5px;
+        border: $dark-gray;
+        color: $dark-gray;
+        font-size: 0.7em;
+        font-style: italic;
+        margin: 0;
+        padding: 0.5em 0.8em;
+        width: 100%;
+      }
+
+      button[type=submit] {
+        background: $dark-gray;
+				color: white;
+        border: none;
+        bottom: 0.3em;
+        left: auto;
+        outline: none;
+        padding: 0 9px;
+        position: absolute;
+        right: 0.3em;
+        top: 0.3em;
+
+        i {
+					float: left;
+					color: black;
+          padding: 1px;
+        }
+      }
+    }
+}
+
+.badge {
+  font-size: .75em;
+  background-color: $dark-gray;
+  margin: 0 1px 1px 0;
+  color: white;
+  border-radius: 5px;
+  @include border-style(solid);
+  @include border-width(.1em);
 }
 
 #new-cheese {

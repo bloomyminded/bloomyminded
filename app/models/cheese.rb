@@ -14,4 +14,7 @@ class Cheese < ActiveRecord::Base
   validates_attachment_content_type :cheeseimg, content_type: /\Aimage\/.*\Z/
 
   acts_as_taggable
+
+  scope :similar_cheeses, -> () { find_related_tags }
+  scope :has_tag, -> (tag) { Cheese.tagged_with(tag) }
 end
