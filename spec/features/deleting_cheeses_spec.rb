@@ -6,7 +6,7 @@ RSpec.feature "Users can delete cheeses" do
 
     visit "/"
     click_link "Challerhocker"
-    click_link "Delete Cheese"
+    click_button "Delete Cheese"
 
     expect(page).to have_content "Cheese has been deleted."
     expect(page.current_url).to eql cheeses_url

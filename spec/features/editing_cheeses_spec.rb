@@ -6,7 +6,7 @@ RSpec.feature "Users can edit cheeses" do
 
     visit "/"
     click_link "Challerhocker"
-    click_link "Edit Cheese"
+    click_button "Edit Cheese"
   end
 
   scenario "with valid attributes" do

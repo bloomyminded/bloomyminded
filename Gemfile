@@ -18,6 +18,8 @@ gem "simple_form"
 gem "country_select"
 gem "paperclip", "~> 4.3"
 gem 'devise', "~> 3.4.1"
+gem 'omniauth-github'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem "guard-rspec"
