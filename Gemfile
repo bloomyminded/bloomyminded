@@ -20,6 +20,7 @@ gem "paperclip", "~> 4.3"
 gem 'devise', "~> 3.4.1"
 gem 'omniauth-github'
 gem 'font-awesome-rails'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 group :development, :test do
   gem "guard-rspec"

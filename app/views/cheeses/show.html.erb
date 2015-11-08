@@ -20,6 +20,11 @@
 				<li>Rind: <%= @cheese.rind %></li>
 				<li>Rennet: <%= @cheese.rennet %></li>
 				<li>Age: <%= @cheese.age %></li>
+        <% if @cheese.tags.size > 1 %>
+          <li><i class="fa fa-tags"></i>
+            <small><%= @cheese.tags.join(",") %></small>
+          </li>
+        <% end %>
 		  </ul>
 			<p><h3>Description </h3><span><%= @cheese.description %></span></p>
 		<article>
