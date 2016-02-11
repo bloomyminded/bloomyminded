@@ -1,0 +1,14 @@
+<%= simple_form_for cheese do |f| %>
+    <%= f.input :name, error: "Name is required" %>
+    <%= f.input :producer, error: "Producer is required" %>
+    <%= f.input :country, label: "Country of origin", error: "Country is required" %>
+    <%= f.input :region, label: "State/Region of origin", error: "Region is required" %>
+    <%= f.input :milk, error: "Milk type is required"  %>
+    <%= f.input :rind, error: "Rind is required"  %>
+    <%= f.input :rennet, error: "Rennet is required" %>
+    <%= f.input :texture, error: "Texture is required" %>
+    <%= f.input :age, error: "Age is required" %>
+    <%= f.input :description, as: :text, error: "Description is required" %>
+    <%= f.input :cheeseimg, label: "Image", as: :file %>
+    <%= f.submit %>
+<% end %>

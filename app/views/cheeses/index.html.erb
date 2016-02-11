@@ -1,0 +1,31 @@
+<div class="search-bar-2">
+  <%= link_to "Show All", cheeses_path %>
+  <%= simple_form_for :query, :method => :get, :html => {:roll => "search"} do |f| %>
+    <%= f.input :query, label: false, :placeholder => "Search cheeses..." %>
+  <% end %>
+</div>
+
+<hr>
+
+<div class="grid-items">
+	<% @cheeses.each do |c| %>
+    <a href="<%= cheese_path(c) %>" class="grid-item grid-item-image">
+			<% if c.cheeseimg_file_name == nil %>
+			<% else %>
+				<%= image_tag c.cheeseimg.url(:medium) %>
+			<% end %>
+			<h1><%= c.name %></h1>
+			<p><%= c.producer %></p>
+		</a>
+	<% end %>
+</div>
+
+<br>
+
+<% if user_signed_in? %>
+  <% if ((current_user.has_role? :member) || (current_user.has_role? :admin)) %>
+    <div class="centered">
+      <%= button_to "New Cheese", new_cheese_path, method: :get %>
+    </div>
+  <% end %>
+<% end %>

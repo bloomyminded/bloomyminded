@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+@import "bourbon";
+@import "base/grid-settings";
+@import "neat";
+@import "base/base";
+@import "refills/flashes";
+@import "refills/grid-items";
+@import "refills/centered-navigation";
+@import "refills/footer-2";
+@import "refills/type-system-slab";
+@import "refills/badges";
+@import "refills/expander";
+@import "refills/accordion-tabs-minimal";
+@import "font-awesome";
+
+
+
+.fa-github {
+  color: transparentize(white, 0.3);
+}
+
+.search-bar-2 {
+  @include align-items(flex-end);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  
+  a {
+    font-size: .7em;
+    color: $dark-gray;
+  }
+
+  form {
+    background: white;
+    border-radius: 5px;
+    border: $dark-gray;
+    border-width: 0;
+    color: $dark-gray;
+    font-size: .7em;
+    font-style: italic;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.search-bar {
+    //$search-bar-border-color: $base-border-color;
+    //$search-bar-border: 1px solid $search-bar-border-color;
+    //$search-bar-background: lighten($search-bar-border-color, 10%);
+
+		padding: 0.5em 0.5em;
+    width: 70%;
+
+    form {
+      input[type=text] {
+        @include box-sizing(border-box);
+        background: white;
+        border-radius: 5px;
+        border: $dark-gray;
+        color: $dark-gray;
+        font-size: 0.7em;
+        font-style: italic;
+        margin: 0;
+        padding: 0.5em 0.8em;
+        width: 100%;
+      }
+
+      button[type=submit] {
+        background: $dark-gray;
+				color: white;
+        border: none;
+        bottom: 0.3em;
+        left: auto;
+        outline: none;
+        padding: 0 9px;
+        position: absolute;
+        right: 0.3em;
+        top: 0.3em;
+
+        i {
+					float: left;
+					color: black;
+          padding: 1px;
+        }
+      }
+    }
+}
+
+.badge {
+  font-size: .75em;
+  background-color: $dark-gray;
+  margin: 0 1px 1px 0;
+  color: white;
+  border-radius: 5px;
+  @include border-style(solid);
+  @include border-width(.1em);
+}
+
+#new-cheese {
+	text-align: center;
+}
+
+#about-name {
+	font-family: 'Great Vibes', cursive;
+}
+
+#logo {
+	font-family: 'Great Vibes', cursive;
+	font-weight: 600;
+	font-size: 3em;
+  @include pad();
+	color: white;
+}
+
+hr {
+  border: 0;
+  margin-top: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+html, body {
+	//background-color: $light-gray;
+    @include background-image(url("https://s3-us-west-2.amazonaws.com/bloomyminded/bg.JPG"));
+    background-position: center bottom, center;
+    background-repeat: no-repeat, repeat-x;
+	height: 100%;
+  margin-top: 0;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 0; 
+	padding: 0;
+}
+
+section.main {
+	@include outer-container;
+	
+	.content { 
+		height: 100%;
+		@include span-columns(10); 
+		@include pad();
+		@include shift(1);
+    margin-bottom: 5px; 
+
+		background-color: white;
+  	border-left: 2px solid transparentize($dark-gray, .5);
+  	border-right: 2px solid transparentize($dark-gray, .5);
+  	border-bottom: 2px solid transparentize($dark-gray, .5);
+		border-radius: 0px 0px 15px 15px;
+	}
+
+	.flashes {
+		@include span-columns(6); 
+		@include shift(3);
+		padding: 5px;
+	}
+}
+
+.centered {
+	text-align: center;
+  .fa-copyright {
+    color: transparentize(white, 0.5);
+  }
+
+  small {
+    float: left;
+  }
+}
+
+.buttons-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div {
+    padding-right: 1em;
+    max-width: 50%;
+  }
+  overflow: hidden;
+}
+
+section.show-content {
+	@include outer-container;
+	#dummy {
+		text-align: center;
+	}
+
+	#alpha {
+		aside {
+			@include span-columns(5);
+
+      img {
+        @include border-style(solid);
+        border-color: $dark-gray;
+      }
+		}
+
+		article {
+			@include span-columns(7);
+			@include reset-display;
+		}
+	}
+}

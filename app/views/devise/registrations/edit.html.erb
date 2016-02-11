@@ -1,0 +1,8 @@
+<article class="type-system-slab">
+<h1>Edit Account</h1>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.input :name, autofocus: true %>
+  <%= f.button :submit, "Update" %>
+<% end %>
+<article class="type-system-slab">
