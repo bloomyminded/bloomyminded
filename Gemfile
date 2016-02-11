@@ -45,3 +45,7 @@ group :test do
   gem "capybara-webkit"
   gem "database_cleaner"
 end
+
+group :production do
+  gem 'rails_12factor'
+end
